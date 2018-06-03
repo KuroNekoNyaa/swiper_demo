@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/swiper/idangerous.swiper2.7.6.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 0;
+        }
+
+        .tabs {
+            width: 606px;
+            margin: 0 auto;
+            /*overflow: hidden;*/
+            font-size: 0;
+        }
+
+        .tabs a{
+            /*float: left;*/
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 40px;
+            font-size: 25px;
+            font-style: italic;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .tabs a.active{
+            color: #fff;
+            background: #333;
+            border-bottom: 1px solid #000;
+        }
+
+        .swiper-container {
+            width: 604px;
+            height: 250px;
+            border: 1px solid #ccc;
+            background: #333;
+            border-radius: 0 0 5px 5px;
+            border-top: 0;
+        }
+
+        .swiper-slide {
+            height: 250px;
+            width: 100%;
+            background: none;
+            color: #fff;
+        }
+        .content-slide {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <a href="#" class="active">Tab1</a>
+    <a href="#">Tab2</a>
+    <a href="#">Tab3</a>
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="content-slide">
+                <h2>Tabs Example</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia vulputate hendrerit. Suspendisse potenti. Etiam rutrum egestas massa, ut facilisis magna tristique nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc interdum tempus turpis ut tempus. Mauris dictum blandit lectus, a dictum erat dictum non. Etiam ultrices convallis interdum. Curabitur varius auctor enim, quis dictum nibh fringilla ut. Sed vel lacus ac odio molestie sodales quis sit amet lacus. Curabitur id porta eros. Fusce in varius nisi.</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="content-slide">
+                <h2>Tabs Example1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia vulputate hendrerit. Suspendisse potenti. Etiam rutrum egestas massa, ut facilisis magna tristique nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc interdum tempus turpis ut tempus. Mauris dictum blandit lectus, a dictum erat dictum non. Etiam ultrices convallis interdum. Curabitur varius auctor enim, quis dictum nibh fringilla ut. Sed vel lacus ac odio molestie sodales quis sit amet lacus. Curabitur id porta eros. Fusce in varius nisi.</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="content-slide">
+                <h2>Tabs Example2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia vulputate hendrerit. Suspendisse potenti. Etiam rutrum egestas massa, ut facilisis magna tristique nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc interdum tempus turpis ut tempus. Mauris dictum blandit lectus, a dictum erat dictum non. Etiam ultrices convallis interdum. Curabitur varius auctor enim, quis dictum nibh fringilla ut. Sed vel lacus ac odio molestie sodales quis sit amet lacus. Curabitur id porta eros. Fusce in varius nisi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/swiper/idangerous.swiper2.7.6.min.js"></script>
+<script>
+
+var swiper = new Swiper('.swiper-container', {
+    onlyExternal: true,// 不能直接滑动了
+    speed: 500
+});
+var tabs = $('.tabs a');
+tabs.on('mouseover', function (e) {
+    e.preventDefault();
+    $('.tabs a').removeClass('active');
+    $(this).addClass('active');
+    swiper.swipeTo($(this).index());
+})
+</script>
+</body>
+</html>

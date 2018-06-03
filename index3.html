@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>Swiper Demo3</title>
+    <link rel="stylesheet" type="text/css" href="js/swiper/idangerous.swiper2.7.6.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+            height:100%;
+        }
+
+        .swiper-container,.swiper-wrapper, .swiper-slide {
+            width: 100%;
+            height:100%;
+        }
+        .bg-1png{background: url(img/1.png); background-size:contain;}
+        .bg-2png{background: url(img/2.jpg); background-size:contain;}
+        .bg-3png{background: url(img/3.png); background-size:contain;}
+        .bg-4png{background: url(img/4.png); background-size:contain;}
+
+        .tabs {
+            z-index: 999;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 45px;
+            line-height: 45px;
+            background: #fff;
+            color: #333;
+            border-top: 1px solid #ddd;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .tabs a{
+            display: inline-block;
+            width:23%;
+            text-align: center;
+            font-size:14px;
+            color:#333;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-right: 1px solid #000;
+        }
+        .tabs a:last-child {
+            border: 0;
+        }
+        .tabs a.active{
+            color:#e40;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container" id="swiper3">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide bg-1png"></div>
+        <div class="swiper-slide bg-2png"></div>
+        <div class="swiper-slide bg-3png"></div>
+        <div class="swiper-slide bg-4png"></div>
+    </div>
+</div>
+
+<div class="tabs">
+    <a href="" class="active">首页</a>
+    <a href="">发现</a>
+    <a href="">你的</a>
+    <a href="">世界</a>
+</div>
+
+<script type="text/javascript" src="js/jquery/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/swiper/idangerous.swiper2.7.6.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

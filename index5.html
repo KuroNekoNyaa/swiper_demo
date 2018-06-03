@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/swiper/idangerous.swiper2.7.6.css">
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+
+        .swiper-container {
+            width: 1800px;
+            height: 600px;
+            position: relative;
+        }
+        .swiper-slide {
+            width: 300px;
+        }
+
+        .pagination {
+            position: absolute;
+            z-index: 20;
+            left: 50%;
+            margin-left: -60px;
+            bottom: 10px;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #222;
+            margin-right: 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .swiper-visible-switch {
+            background: #aaa;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/d1.png" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d2.png" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d3.jpg" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d4.jpg" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d5.jpg" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d6.jpg" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d7.jpg" alt="" width="400" height="600"></div>
+        <div class="swiper-slide"><img src="img/d8.jpg" alt="" width="400" height="600"></div>
+    </div>
+
+    <div class="pagination"></div>
+</div>
+
+<script type="text/javascript" src="js/jquery/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/swiper/idangerous.swiper2.7.6.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop:  true,
+        autoplay: 2000,
+        slidesPerView: 4,
+        pagination: '.pagination',
+        paginationClickable: true,
+        autoplayDisableOnInteraction : false //解决点击pagination后不会自动播放
+    })
+</script>
+</body>
+</html>
